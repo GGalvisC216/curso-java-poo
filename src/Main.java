@@ -1,10 +1,20 @@
+import static ui.UIMenu.*;
+
 public class Main {
     public static void main(String[] args) {
 
-        Doctor myDoctor = new Doctor("Andres Salgado");
-        myDoctor.showName();
-        myDoctor.name = "Alejandro Rodríguez";
-        myDoctor.showName();
+        Doctor doctorAlejandro = new Doctor();
+        doctorAlejandro.name = "Alejandro Rodríguez";
+        doctorAlejandro.showName();
+        doctorAlejandro.showId();
+        System.out.println(Doctor.sequence);
 
+        Doctor doctorAna = new Doctor();
+        doctorAna.name = "Ana Rodríguez";
+        doctorAna.showName();
+        doctorAna.showId();
+        System.out.println(Doctor.sequence);
+
+        showMenu();
     }
 }
