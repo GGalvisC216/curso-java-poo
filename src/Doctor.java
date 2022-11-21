@@ -1,17 +1,19 @@
 public class Doctor {
-    static int sequence = 0;
+    static int sequence = 1;
     int id;
     String name;
     String specialty;
 
     Doctor(){
-        System.out.println("Construyendo el Objeto Doctor");
+        System.out.println("Building Doctor object");
         id = sequence++;
     }
 
-    Doctor(String name) {
-        System.out.println("El nombre del Doctor asignado es: " + name);
+    Doctor(String name, String specialty) {
+        this();
+        System.out.println("The doctor's name is: " + name);
         this.name = name;
+        this.specialty = specialty;
     }
 
     public void showName() {
