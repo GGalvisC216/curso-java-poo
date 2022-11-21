@@ -2,6 +2,7 @@ public class Doctor {
     static int sequence = 1;
     int id;
     String name;
+    String email;
     String specialty;
 
     Doctor(){
