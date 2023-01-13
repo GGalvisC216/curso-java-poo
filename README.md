@@ -20,8 +20,6 @@ Contenido del curso
   * Encapsulamiento
   * Getters y Setters
   * Clases Anidadas
-  * Clases Internas y Locales
-  * Enumerations
 * Reutilizar Código
   * Herencia
   * Polimorfismo

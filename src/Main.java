@@ -25,5 +25,7 @@ public class Main {
         patient.setPhoneNumber("12346578");
         System.out.println(patient.getPhoneNumber());
 
+        System.out.println(patient);
+
     }
 }

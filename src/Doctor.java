@@ -1,31 +1,19 @@
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor {
-    static int sequence = 1;
-    private int id;
-    private String name;
-    private String email;
+public class Doctor extends User{
     private String specialty;
 
-    Doctor(){
-        System.out.println("Building Doctor object");
-        id = sequence++;
+    Doctor(String name, String email) {
+        super(name, email);
     }
 
-    Doctor(String name, String specialty) {
-        this();
-        System.out.println("The doctor's name is: " + name);
-        this.name = name;
+    public String getSpecialty() {
+        return specialty;
+    }
+
+    public void setSpecialty(String specialty) {
         this.specialty = specialty;
-    }
-
-    public void showName() {
-        System.out.println(name);
-    }
-
-    public void showId() {
-        System.out.println("ID Doctor: " + id);
     }
 
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
