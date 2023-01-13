@@ -1,22 +1,27 @@
-import java.util.Date;
+import model.Doctor;
+import model.Patient;
 
-import static ui.UIMenu.*;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
 
         //showMenu();
 
-        Doctor doctorAna = new Doctor("Ana Salgado", "Pediatrics");
+        Doctor doctorAna = new Doctor("Ana Salgado", "ana@mail.com");
+        doctorAna.setSpecialty("Pediatra");
         doctorAna.addAvailableAppointment(new Date(), "4pm");
         doctorAna.addAvailableAppointment(new Date(), "10am");
         doctorAna.addAvailableAppointment(new Date(), "1pm");
 
-        for (Doctor.AvailableAppointment availableAppointment:
+        System.out.println(doctorAna);
+        /*
+        for (model.Doctor.AvailableAppointment availableAppointment:
              doctorAna.getAvailableAppointments()) {
             System.out.println(availableAppointment.getDate() + " " +
                     availableAppointment.getTime());
         }
+        */
 
         Patient patient = new Patient("Alejandra", "alejandra@mail.com");
         patient.setWeight(54.6);
