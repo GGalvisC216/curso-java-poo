@@ -1,5 +1,6 @@
 package model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AppointmentDoctor implements ISchedulable{
@@ -8,6 +9,12 @@ public class AppointmentDoctor implements ISchedulable{
     private Doctor doctor;
     private Date date;
     private String time;
+    private SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+
+    public AppointmentDoctor(Patient patient, Doctor doctor) {
+        this.patient = patient;
+        this.doctor = doctor;
+    }
 
     public int getId() {
         return id;
@@ -33,7 +40,10 @@ public class AppointmentDoctor implements ISchedulable{
         this.doctor = doctor;
     }
 
-    public Date getDate() {
+    public String getDate() {
+        return format.format(date);
+    }
+    public Date getDate(String DATE) {
         return date;
     }
 
@@ -42,7 +52,7 @@ public class AppointmentDoctor implements ISchedulable{
     }
 
     public String getTime() {
-        return time;
+        return time + " hrs.";
     }
 
     public void setTime(String time) {
@@ -51,6 +61,7 @@ public class AppointmentDoctor implements ISchedulable{
 
     @Override
     public void schedule(Date date, String time) {
-
+        this.date = date;
+        this.time = time;
     }
 }

@@ -2,11 +2,15 @@ import model.*;
 
 import java.util.Date;
 
+import static ui.UIMenu.setupData;
+import static ui.UIMenu.showMenu;
+
 public class Main {
     public static void main(String[] args) {
 
-        //showMenu();
-
+        setupData();
+        showMenu();
+        /*
         Doctor doctorAna = new Doctor("Ana Salgado", "ana@mail.com");
         doctorAna.setSpecialty("Pediatra");
         doctorAna.addAvailableAppointment(new Date(), "4pm");
@@ -32,7 +36,7 @@ public class Main {
         userAnonymous.showDataUser();
         System.out.println(userAnonymous);
 
-        /*
+
         ISchedulable iSchedulable = new AppointmentDoctor();
         iSchedulable.schedule();
 
