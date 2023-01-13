@@ -1,5 +1,4 @@
-import model.Doctor;
-import model.Patient;
+import model.*;
 
 import java.util.Date;
 
@@ -15,13 +14,34 @@ public class Main {
         doctorAna.addAvailableAppointment(new Date(), "1pm");
 
         System.out.println(doctorAna);
+
+        User user = new Doctor("Andres", "andres@mail.com");
+        user.showDataUser();
+
+        User userPatient = new Patient("Jose", "jose@mail.com");
+        userPatient.showDataUser();
+
+        User userAnonymous = new User("Juana", "juana@mail.com") {
+            @Override
+            public void showDataUser() {
+                System.out.println("Usuario");
+                System.out.println("Externo al hospital");
+            }
+        };
+
+        userAnonymous.showDataUser();
+        System.out.println(userAnonymous);
+
         /*
+        ISchedulable iSchedulable = new AppointmentDoctor();
+        iSchedulable.schedule();
+
         for (model.Doctor.AvailableAppointment availableAppointment:
              doctorAna.getAvailableAppointments()) {
             System.out.println(availableAppointment.getDate() + " " +
                     availableAppointment.getTime());
         }
-        */
+
 
         Patient patient = new Patient("Alejandra", "alejandra@mail.com");
         patient.setWeight(54.6);
@@ -31,6 +51,6 @@ public class Main {
         System.out.println(patient.getPhoneNumber());
 
         System.out.println(patient);
-
+        */
     }
 }

@@ -29,6 +29,13 @@ public class Doctor extends User{
     }
 
     @Override
+    public void showDataUser() {
+        System.out.println("Empleado");
+        System.out.println("Hospital: Cruz Roja");
+        System.out.println("Departamento: Oncologia");
+    }
+
+    @Override
     public String toString() {
         return super.toString() + ", Specialty: " + specialty + "\nAvailable: " + availableAppointments.toString();
     }
